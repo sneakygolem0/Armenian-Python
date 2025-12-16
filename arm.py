@@ -18,11 +18,9 @@ TYPES = [
 ]
 
 def translate(code: str) -> str:
-    # Remove type keywords
     for t in TYPES:
         code = code.replace(t + " ", "")
 
-    # Replace Armenian keywords
     for arm, py in KEYWORDS.items():
         code = code.replace(arm, py)
 
